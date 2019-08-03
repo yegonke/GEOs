@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SQLite">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+
+        </android.support.design.widget.AppBarLayout>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/design_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="83dp"
+            android:text="Login" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="240dp"
+            android:ems="10"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="188dp"
+            android:ems="10"
+            android:hint="Enter Password "
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="107dp"
+            android:text="Your account will allow you access to restricted content and allow for filtering the most appropriate content"
+            android:textAlignment="center"
+            android:textColor="#FF2" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/email"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="21dp"
+            android:background="@null"
+            android:text="Register"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_alignRight="@+id/email" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+</android.support.v4.widget.DrawerLayout>

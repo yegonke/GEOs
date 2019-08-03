@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#191919</color>
+    <color name="colorPrimaryDark">#252525</color>
+    <color name="colorAccent">#0b7626</color>
+    <color name="colorForeground">#ffffff</color>
+    .<array name="dot_on_page_active">
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+    </array>
+        .<array name="dot_on_page_not_active">
+        <item>#737373</item>
+        <item>#737373</item>
+        <item>#737373</item>
+        <item>#737373</item>
+        <item>#737373</item>
+    </array>
+</resources>

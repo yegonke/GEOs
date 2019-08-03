@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".scr">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        android:tooltipText="Send Feedback."/>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/design_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="50dp"
+        app:elevation="4dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/bs_text"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="Introducing Bottom Sheets"
+                android:textColor="#FFFFFF" />
+
+            <VideoView
+                android:id="@+id/bs_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/bs_text" />
+
+            <!--<WebView-->
+                <!--android:id="@+id/bs_web"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/bs_text"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_centerVertical="true"/>-->
+
+            <ProgressBar
+                android:id="@+id/bs_progress"
+                style="@android:style/Widget.ProgressBar.Inverse"
+                android:layout_width="83dp"
+                android:layout_height="73dp"
+                android:layout_centerInParent="true"
+                android:indeterminateOnly="false" />
+
+            <ImageView
+                android:id="@+id/bs_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="11dp"
+                android:layout_marginTop="44dp"
+                app:srcCompat="@drawable/menu_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="11dp" />
+
+
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>
